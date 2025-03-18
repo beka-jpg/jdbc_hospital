@@ -90,6 +90,10 @@ public class Main {
 //        System.out.println(doctorInterfaceDao.getAllDoctors());
 
         try {
+            doctorInterfaceService.createTableDoctor();
+            patientInterfaceService.createTablePatient();
+            hospitalInterfaceService.createTableHospital();
+
 
             boolean isTrue = true;
 
