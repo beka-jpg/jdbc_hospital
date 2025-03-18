@@ -90,6 +90,10 @@ public class Main {
 //        System.out.println(doctorInterfaceDao.getAllDoctors());
 
         try {
+            doctorInterfaceService.createTableDoctor();
+            patientInterfaceService.createTablePatient();
+            hospitalInterfaceService.createTableHospital();
+
 
             boolean isTrue = true;
 
@@ -189,16 +193,15 @@ public class Main {
                     case 8:
 
                         System.out.println("Enter a gender");
-                        scanner.next();
+                        scanner.nextLine();
                         String genderChose = scanner.nextLine();
+                        System.out.println(genderChose);
                         System.out.println(
                                 patientInterfaceService.getPatientsByGender(genderChose));
                         break;
                 }
 
             }
-
-
         } catch (Exception e){
             e.printStackTrace();
         }
